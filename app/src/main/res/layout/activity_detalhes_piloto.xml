@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetalhesPilotoActivity"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/nomePiloto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Nome do Piloto" />
+
+    <TextView
+        android:id="@+id/corridasPiloto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Corridas: "
+        app:layout_constraintTop_toBottomOf="@id/nomePiloto"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/vitoriasPiloto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vitórias: "
+        app:layout_constraintTop_toBottomOf="@id/corridasPiloto"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/podiosPiloto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pódios: "
+        app:layout_constraintTop_toBottomOf="@id/vitoriasPiloto"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/pontosPiloto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pontos: "
+        app:layout_constraintTop_toBottomOf="@id/podiosPiloto"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="18sp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
