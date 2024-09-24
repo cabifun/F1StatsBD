@@ -1,6 +1,7 @@
 package com.example.f1stats
 
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -26,6 +27,20 @@ class DetalhesPilotoActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.podiosPiloto).text = "Pódios: $podios"
         findViewById<TextView>(R.id.pontosPiloto).text = "Pontos: $pontos"
 
+        val imagemPiloto: ImageView = findViewById(R.id.imagemPiloto)
+        imagemPiloto.setImageResource(getPilotoImageResource(nomePiloto))
+
+    }
+
+    private fun getPilotoImageResource(nomePiloto: String?): Int {
+        return when (nomePiloto) {
+            "Max Verstappen" -> R.drawable.verstappen
+            "Lando Norris" -> R.drawable.norris
+            "Charles Leclerc" -> R.drawable.leclerc
+            "Oscar Piastri" -> R.drawable.piastri
+            "Lewis Hamilton" -> R.drawable.hamilton
+            else -> R.drawable.f1logo // Use uma imagem padrão se o piloto não for encontrado
+        }
     }
 
 }
